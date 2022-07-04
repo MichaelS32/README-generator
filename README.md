@@ -1,7 +1,7 @@
 # README.md Generator
 
   ## Description
-  This command line application was designed to construct a markdown readme framework based on the answers of the prompts given to users
+  This command line application uses the Inquirer NPM, File System (FS), and Node.js to construct a markdown readme framework based on the answers of the prompts given to users
 
   ## Demonstration
   <img src='./src/giphy.mp4' alt='README Generator Gif' width='50%' />
@@ -10,6 +10,7 @@
 
   ## Installation
   💾   
+  To generate your own README, `git clone` the repo down to your local so you have the Node project on your local.
   
   `npm init`
   
