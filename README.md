@@ -4,7 +4,7 @@
   This command line application uses the Inquirer NPM, File System (FS), and Node.js to construct a markdown readme framework based on the answers of the prompts given to users
 
   ## Demonstration
-  ![Gif demo of README-generator](./src/giphy.gif)
+  ![Gif demo of README-generator](./src/6lp8wv.gif)
 
   [Video Link](https://drive.google.com/file/d/1e1sAo6Cs3j0ioHTJ98gfcNv22Exm872g/view)
 
