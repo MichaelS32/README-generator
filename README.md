@@ -11,6 +11,7 @@
   ## Installation
   💾   
   To generate your own README, `git clone` the repo down to your local so you have the Node project on your local.
+  Then from the terminal run the following commans.
   
   `npm init`
   
