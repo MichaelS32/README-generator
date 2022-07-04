@@ -1,11 +1,11 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 
 
 const generateMarkdown = require('./utils/generateMarkdown')
 
-// TODO: Create an array of questions for user input
+// an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
     {
@@ -52,8 +52,8 @@ const questions = () => {
         type: 'input',
         name: 'usage',
         message: 'How do you use this project?',
-        validate: nameInput => {
-            if (nameInput) {
+        validate: usageInput => {
+            if (usageInput) {
                 return true;
             } else {
                 console.log('Please enter a description for project usage!');
@@ -76,22 +76,15 @@ const questions = () => {
         type: 'list',
         name: 'license',
         message: 'What kind of license should your project have?',
-        choices: ['MIT', 'GNU General Public License 2.0', 'Apache License 2.0', 'GNU General Public License 3.0', {name:'none', value:''}],
+        choices: [{name:'none', value:''}, {name:'MIT', value:'MIT'}, {name:'GNU General Public License 2.0', value:'GNU General Public License 2.0'}, {name:'Apache License 2.0', value: 'Apache License 2.0'}, {name:'GNU General Public License 3.0', value: "GNU General Public License 3.0"}],
         default: ['None'],
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Please choose a license!');
-                return false; 
-            }
-        }
+        
     }
 
     ]);
 };
 
-// TODO: Create a function to write README file
+// function to write README file
 const writeToFile = data => {
     fs.writeFile('./results/README.md', data, err => {
         if (err) {
@@ -103,9 +96,7 @@ const writeToFile = data => {
     })
 }
 
-// TODO: Create a function to initialize app
-
-
+// function to initialize app
 async function init() {
     const data = await questions();
     const content = generateMarkdown(data);
