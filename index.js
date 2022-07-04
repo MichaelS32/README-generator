@@ -79,6 +79,32 @@ const questions = () => {
         choices: [{name:'none', value:''}, {name:'MIT', value:'MIT'}, {name:'GNU General Public License 2.0', value:'GNU General Public License 2.0'}, {name:'Apache License 2.0', value: 'Apache License 2.0'}, {name:'GNU General Public License 3.0', value: "GNU General Public License 3.0"}],
         default: ['None'],
         
+    },
+    {
+        type: 'input',
+        name: 'username',
+        message: 'Please enter your Github username.',
+        validate: usernameInput => {
+            if (usernameInput) {
+                return true;
+            } else {
+                console.log('Please enter your Github username!');
+                return false; 
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email address.',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter your email address!');
+                return false; 
+            }
+        }
     }
 
     ]);
